@@ -1,0 +1,16 @@
+{
+  "model": "claude-sonnet-4",
+  "strategy": "S5_cot_forcing",
+  "benchmark": "custom",
+  "n_instances": 375,
+  "verdict_distribution": {
+    "A": 136,
+    "B": 168,
+    "tie": 71
+  },
+  "agreement_rate": 0.96,
+  "total_cost_usd": 3.7262939999999998,
+  "avg_latency_ms": 9787.50315124976,
+  "total_input_tokens": 458488,
+  "total_output_tokens": 156722
+}

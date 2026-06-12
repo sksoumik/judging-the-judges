@@ -1,0 +1,16 @@
+{
+  "model": "llama-3.3-70b",
+  "strategy": "S1_position_swap",
+  "benchmark": "llmbar",
+  "n_instances": 200,
+  "verdict_distribution": {
+    "A": 86,
+    "B": 82,
+    "tie": 32
+  },
+  "agreement_rate": 0.6,
+  "total_cost_usd": 0.0,
+  "avg_latency_ms": 5591.138633282972,
+  "total_input_tokens": 155226,
+  "total_output_tokens": 29743
+}

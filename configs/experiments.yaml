@@ -1,0 +1,72 @@
+# Experiment matrix configuration
+
+experiment_matrix:
+  # Models to evaluate as judges
+  models:
+    - gemini-2.5-pro
+    - gemini-2.5-flash
+    - claude-sonnet-4
+    - gpt-4o
+    - llama-3.3-70b
+
+  # Strategies to test
+  strategies:
+    - B0_naive
+    - S1_position_swap
+    - S2_ensemble_same
+    - S3_ensemble_cross
+    - S4_calibrated_rubric
+    - S5_cot_forcing
+    - S6_reference_guided
+    - S7_combined_full
+    - S8_combined_budget
+
+  # Benchmarks to run on
+  benchmarks:
+    - mt_bench
+    - alpaca_eval
+    - llmbar
+    - faireval
+    - custom
+
+# Sampling to control cost
+sampling:
+  mt_bench: 400           # Sample 400 from 3355
+  alpaca_eval: 200        # Sample 200 from 805
+  llmbar: 200             # Sample 200 from 419
+  faireval: null           # Use all
+  custom: null             # Use all 200
+
+# Run priorities (run in this order; stop if out of time/budget)
+priorities:
+  - name: "Priority 1: Baseline bias measurement"
+    strategies: [B0_naive]
+    benchmarks: [mt_bench, custom]
+    models: all
+
+  - name: "Priority 2: All strategies on MT-Bench (frontier models)"
+    strategies: all
+    benchmarks: [mt_bench]
+    models: [gemini-2.5-pro, claude-sonnet-4]
+
+  - name: "Priority 3: Expand to other benchmarks"
+    strategies: all
+    benchmarks: [alpaca_eval, llmbar]
+    models: [gemini-2.5-pro, claude-sonnet-4]
+
+  - name: "Priority 4: Custom dataset all models"
+    strategies: all
+    benchmarks: [custom]
+    models: all
+
+  - name: "Priority 5: Fill remaining matrix"
+    strategies: [B0_naive, S1_position_swap, S3_ensemble_cross, S8_combined_budget]
+    benchmarks: [mt_bench, custom]
+    models: [gemini-2.5-flash, gemini-2.5-flash-lite]
+
+# Concurrency settings
+concurrency:
+  max_concurrent_calls: 10
+  rate_limit_per_minute:
+    gemini: 60
+    anthropic: 30

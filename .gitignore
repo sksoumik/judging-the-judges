@@ -1,0 +1,66 @@
+# Environment and secrets
+.env
+.env.local
+.env.*.local
+.env.production
+
+# Certificates
+.certs/
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+
+# Linter/formatter caches
+.ruff_cache/
+.mypy_cache/
+.pytest_cache/
+
+# LaTeX build artifacts
+*.aux
+*.log
+*.bbl
+*.blg
+*.out
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+texput.log
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Raw results (large, cached per-instance API responses)
+results/raw/
+
+# Paper source (submitted separately)
+paper/
+
+# Submission plans
+TMLR_Submission_Plan.md
+
+# Local-only deployment overrides (private; not part of the public package)
+src/judges/_local_*.py
+data/custom/_local_*.py
+
+# Human study data (annotator answers and decoding keys; not committed)
+data/human_study/
+
+# Reviewer working notes / scratch
+8350_*.pdf

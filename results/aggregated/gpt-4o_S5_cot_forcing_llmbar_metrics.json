@@ -1,0 +1,16 @@
+{
+  "model": "gpt-4o",
+  "strategy": "S5_cot_forcing",
+  "benchmark": "llmbar",
+  "n_instances": 199,
+  "verdict_distribution": {
+    "A": 93,
+    "B": 94,
+    "tie": 12
+  },
+  "agreement_rate": 0.7638190954773869,
+  "total_cost_usd": 1.2735675000000006,
+  "avg_latency_ms": 13919.997922958568,
+  "total_input_tokens": 101043,
+  "total_output_tokens": 102096
+}

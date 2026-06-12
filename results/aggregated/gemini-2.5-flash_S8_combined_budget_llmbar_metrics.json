@@ -1,0 +1,16 @@
+{
+  "model": "gemini-2.5-flash",
+  "strategy": "S8_combined_budget",
+  "benchmark": "llmbar",
+  "n_instances": 200,
+  "verdict_distribution": {
+    "A": 84,
+    "B": 96,
+    "tie": 20
+  },
+  "agreement_rate": 0.81,
+  "total_cost_usd": 0.10842390000000003,
+  "avg_latency_ms": 18865.90385398944,
+  "total_input_tokens": 280026,
+  "total_output_tokens": 110700
+}

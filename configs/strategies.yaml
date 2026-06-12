@@ -1,0 +1,69 @@
+# Debiasing strategy configurations
+
+strategies:
+  B0_naive:
+    name: "Baseline (Naive)"
+    type: naive
+    cost_multiplier: 1
+    description: "Single judge call, fixed position, default prompt"
+
+  S1_position_swap:
+    name: "Position Swap"
+    type: position_swap
+    cost_multiplier: 2
+    description: "Run twice with swapped positions, take consistent verdict or average"
+
+  S2_ensemble_same:
+    name: "Same-Family Ensemble"
+    type: ensemble_same
+    cost_multiplier: 3
+    temperatures: [0.0, 0.3, 0.7]
+    description: "3 calls with same model at different temperatures, majority vote"
+
+  S3_ensemble_cross:
+    name: "Cross-Family Ensemble"
+    type: ensemble_cross
+    cost_multiplier: 3
+    models:
+      - gemini-2.5-pro
+      - claude-sonnet-4
+      - gemini-2.5-flash
+    description: "3 judges from different model families, majority vote"
+
+  S4_calibrated_rubric:
+    name: "Calibrated Rubric"
+    type: calibrated_rubric
+    cost_multiplier: 1
+    description: "Detailed scoring rubric with 5 criteria and scale anchors"
+
+  S5_cot_forcing:
+    name: "Chain-of-Thought Forcing"
+    type: cot_forcing
+    cost_multiplier: 1
+    description: "Force step-by-step reasoning before verdict"
+
+  S6_reference_guided:
+    name: "Reference-Guided"
+    type: reference_guided
+    cost_multiplier: 1
+    description: "Provide gold-standard reference answer for anchoring"
+
+  S7_combined_full:
+    name: "Combined Full (S1+S3+S4)"
+    type: combined
+    sub_strategies:
+      - S1_position_swap
+      - S3_ensemble_cross
+      - S4_calibrated_rubric
+    cost_multiplier: 6
+    description: "Position swap + cross-family ensemble + calibrated rubric"
+
+  S8_combined_budget:
+    name: "Combined Budget (S1+S5+S4)"
+    type: combined
+    sub_strategies:
+      - S1_position_swap
+      - S5_cot_forcing
+      - S4_calibrated_rubric
+    cost_multiplier: 2
+    description: "Position swap + CoT + calibrated rubric (budget-friendly)"

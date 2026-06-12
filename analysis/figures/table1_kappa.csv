@@ -1,0 +1,6 @@
+Model,Baseline,Pos. Swap,Rubric,CoT,Combined Budget
+Gemini 2.5 Pro,0.455,0.480,0.457,0.459,0.463
+Claude Sonnet 4,0.358,0.380,0.388,0.445,0.522
+GPT-4o,0.440,0.485,0.427,0.456,0.473
+Llama 3.3-70B,0.440,0.503,0.480,0.457,0.529
+Gemini 2.5 Flash,0.416,0.502,0.451,0.449,0.549

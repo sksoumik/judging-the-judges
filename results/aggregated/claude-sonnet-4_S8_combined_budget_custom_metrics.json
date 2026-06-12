@@ -1,0 +1,16 @@
+{
+  "model": "claude-sonnet-4",
+  "strategy": "S8_combined_budget",
+  "benchmark": "custom",
+  "n_instances": 375,
+  "verdict_distribution": {
+    "A": 118,
+    "B": 144,
+    "tie": 113
+  },
+  "agreement_rate": 1.0,
+  "total_cost_usd": 6.234813,
+  "avg_latency_ms": 10672.916736535417,
+  "total_input_tokens": 1113476,
+  "total_output_tokens": 192959
+}

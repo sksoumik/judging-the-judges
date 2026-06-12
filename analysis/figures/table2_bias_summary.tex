@@ -1,0 +1,35 @@
+\begin{table}
+\caption{Bias measurements on custom controlled dataset. Values show preference direction (positive = prefers first/longer/markdown).}
+\label{tab:bias_summary}
+\begin{tabular}{lllll}
+\toprule
+Model & Strategy & Position Bias & Verbosity Bias & Style Bias \\
+\midrule
+Gemini 2.5 Pro & Baseline & +0.02 & +0.40 & +0.76 \\
+Gemini 2.5 Pro & Pos. Swap & +0.00 & +0.24 & +0.72 \\
+Gemini 2.5 Pro & Rubric & +0.00 & +0.34 & +0.73 \\
+Gemini 2.5 Pro & CoT & +0.00 & +0.40 & +0.60 \\
+Gemini 2.5 Pro & Combined Budget & +0.00 & +0.32 & +0.74 \\
+Claude Sonnet 4 & Baseline & +0.00 & -0.12 & +0.68 \\
+Claude Sonnet 4 & Pos. Swap & +0.00 & -0.14 & +0.68 \\
+Claude Sonnet 4 & Rubric & +0.08 & +0.20 & +0.77 \\
+Claude Sonnet 4 & CoT & +0.00 & +0.06 & +0.49 \\
+Claude Sonnet 4 & Combined Budget & +0.00 & +0.14 & +0.73 \\
+GPT-4o & Baseline & +0.00 & -0.04 & +0.10 \\
+GPT-4o & Pos. Swap & +0.00 & +0.14 & +0.15 \\
+GPT-4o & Rubric & +0.10 & +0.48 & +0.41 \\
+GPT-4o & CoT & +0.00 & +0.26 & +0.31 \\
+GPT-4o & Combined Budget & +0.00 & +0.28 & +0.37 \\
+Llama 3.3-70B & Baseline & +0.00 & +0.44 & +0.40 \\
+Llama 3.3-70B & Pos. Swap & +0.00 & +0.42 & +0.34 \\
+Llama 3.3-70B & Rubric & +0.38 & +0.58 & +0.44 \\
+Llama 3.3-70B & CoT & +0.08 & +0.46 & +0.58 \\
+Llama 3.3-70B & Combined Budget & +0.00 & +0.56 & +0.35 \\
+Gemini 2.5 Flash & Baseline & +0.00 & +0.24 & +0.72 \\
+Gemini 2.5 Flash & Pos. Swap & +0.00 & +0.26 & +0.75 \\
+Gemini 2.5 Flash & Rubric & +0.00 & +0.40 & +0.62 \\
+Gemini 2.5 Flash & CoT & +0.00 & +0.32 & +0.44 \\
+Gemini 2.5 Flash & Combined Budget & +0.00 & +0.36 & +0.50 \\
+\bottomrule
+\end{tabular}
+\end{table}

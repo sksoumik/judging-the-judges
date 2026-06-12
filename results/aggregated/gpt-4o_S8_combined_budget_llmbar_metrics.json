@@ -1,0 +1,16 @@
+{
+  "model": "gpt-4o",
+  "strategy": "S8_combined_budget",
+  "benchmark": "llmbar",
+  "n_instances": 199,
+  "verdict_distribution": {
+    "A": 77,
+    "B": 82,
+    "tie": 40
+  },
+  "agreement_rate": 0.6532663316582915,
+  "total_cost_usd": 1.5753899999999992,
+  "avg_latency_ms": 12373.677979287195,
+  "total_input_tokens": 280584,
+  "total_output_tokens": 87393
+}

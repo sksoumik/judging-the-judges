@@ -1,0 +1,16 @@
+{
+  "model": "llama-3.3-70b",
+  "strategy": "S1_position_swap",
+  "benchmark": "mt_bench",
+  "n_instances": 400,
+  "verdict_distribution": {
+    "A": 175,
+    "B": 158,
+    "tie": 67
+  },
+  "agreement_rate": 0.68,
+  "total_cost_usd": 0.0,
+  "avg_latency_ms": 5106.794128156616,
+  "total_input_tokens": 459916,
+  "total_output_tokens": 62767
+}

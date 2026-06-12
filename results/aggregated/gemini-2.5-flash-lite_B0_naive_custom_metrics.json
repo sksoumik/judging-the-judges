@@ -1,0 +1,16 @@
+{
+  "model": "gemini-2.5-flash-lite",
+  "strategy": "B0_naive",
+  "benchmark": "custom",
+  "n_instances": 200,
+  "verdict_distribution": {
+    "A": 72,
+    "B": 65,
+    "tie": 63
+  },
+  "agreement_rate": null,
+  "total_cost_usd": 0.0,
+  "avg_latency_ms": 1368.2175781208207,
+  "total_input_tokens": 181935,
+  "total_output_tokens": 18802
+}

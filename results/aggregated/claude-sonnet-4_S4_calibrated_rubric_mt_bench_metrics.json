@@ -1,0 +1,16 @@
+{
+  "model": "claude-sonnet-4",
+  "strategy": "S4_calibrated_rubric",
+  "benchmark": "mt_bench",
+  "n_instances": 400,
+  "verdict_distribution": {
+    "A": 154,
+    "B": 149,
+    "tie": 97
+  },
+  "agreement_rate": 0.6,
+  "total_cost_usd": 2.6018130000000013,
+  "avg_latency_ms": 4972.311665645975,
+  "total_input_tokens": 371036,
+  "total_output_tokens": 99247
+}

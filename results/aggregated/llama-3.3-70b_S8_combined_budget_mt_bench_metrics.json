@@ -1,0 +1,16 @@
+{
+  "model": "llama-3.3-70b",
+  "strategy": "S8_combined_budget",
+  "benchmark": "mt_bench",
+  "n_instances": 400,
+  "verdict_distribution": {
+    "A": 166,
+    "B": 154,
+    "tie": 80
+  },
+  "agreement_rate": 0.695,
+  "total_cost_usd": 0.0,
+  "avg_latency_ms": 7374.116591238999,
+  "total_input_tokens": 757516,
+  "total_output_tokens": 146954
+}

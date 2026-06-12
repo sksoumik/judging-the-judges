@@ -1,0 +1,107 @@
+# Judge model configurations for Vertex AI
+# All models accessed via GCP Vertex AI using Application Default Credentials
+
+models:
+  # --- Frontier Gemini Models ---
+  gemini-2.5-pro:
+    provider: gemini
+    model_id: "gemini-2.5-pro"
+    location: "global"
+    category: frontier
+    temperature: 0.1
+    max_output_tokens: 8192
+    cost_per_1k_input_tokens: 0.00125
+    cost_per_1k_output_tokens: 0.005
+
+  gemini-2.5-flash:
+    provider: gemini
+    model_id: "gemini-2.5-flash"
+    location: "global"
+    category: mid-tier
+    temperature: 0.1
+    max_output_tokens: 8192
+    cost_per_1k_input_tokens: 0.00015
+    cost_per_1k_output_tokens: 0.0006
+
+  # --- Claude Models via Vertex AI ---
+  claude-sonnet-4:
+    provider: anthropic
+    model_id: "claude-sonnet-4@20250514"
+    region: "global"
+    category: frontier
+    temperature: 0.1
+    max_output_tokens: 8192
+    cost_per_1k_input_tokens: 0.003
+    cost_per_1k_output_tokens: 0.015
+
+  # --- OpenAI Models via OpenAI API ---
+  gpt-4o:
+    provider: openai
+    model_id: "gpt-4o"
+    category: frontier
+    temperature: 0.1
+    max_output_tokens: 8192
+    cost_per_1k_input_tokens: 0.0025
+    cost_per_1k_output_tokens: 0.01
+
+  # --- Open-source Models via Vertex AI Model Garden (MaaS) ---
+  llama-3.3-70b:
+    provider: gemini
+    model_id: "meta/llama-3.3-70b-instruct-maas"
+    location: "us-central1"
+    category: open-source
+    temperature: 0.1
+    max_output_tokens: 8192
+    json_mode: false
+    cost_per_1k_input_tokens: 0.0
+    cost_per_1k_output_tokens: 0.0
+
+  # --- Open-source Models via Vertex AI Model Garden (Endpoints) ---
+  # These require deploying endpoints in Vertex AI Model Garden.
+  # Uncomment and set endpoint_id after deployment.
+
+  # llama-3.1-70b-instruct:
+  #   provider: vertex_endpoint
+  #   model_id: "meta/llama-3.1-70b-instruct"
+  #   endpoint_id: "your-endpoint-id"
+  #   location: "us-central1"
+  #   category: open-source
+  #   temperature: 0.1
+  #   max_output_tokens: 8192
+  #   cost_per_1k_input_tokens: 0.0
+    #   cost_per_1k_output_tokens: 0.0
+
+  # llama-3.1-8b-instruct:
+  #   provider: vertex_endpoint
+  #   model_id: "meta/llama-3.1-8b-instruct"
+  #   endpoint_id: "your-endpoint-id"
+  #   location: "us-central1"
+  #   category: open-source
+  #   temperature: 0.1
+  #   max_output_tokens: 8192
+
+  # gemma-3-27b-it:
+  #   provider: vertex_endpoint
+  #   model_id: "google/gemma-3-27b-it"
+  #   endpoint_id: "your-endpoint-id"
+  #   location: "us-central1"
+  #   category: open-source
+  #   temperature: 0.1
+  #   max_output_tokens: 8192
+
+  # mistral-large:
+  #   provider: vertex_endpoint
+  #   model_id: "mistral/mistral-large"
+  #   endpoint_id: "your-endpoint-id"
+  #   location: "us-central1"
+  #   category: open-source
+  #   temperature: 0.1
+  #   max_output_tokens: 8192
+
+# Default settings applied to all models unless overridden
+defaults:
+  temperature: 0.1
+  max_output_tokens: 8192
+  max_retries: 3
+  retry_delay: 2.0
+  timeout: 120.0

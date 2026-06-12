@@ -1,0 +1,16 @@
+{
+  "model": "gemini-2.5-pro",
+  "strategy": "S3_ensemble_cross",
+  "benchmark": "custom",
+  "n_instances": 375,
+  "verdict_distribution": {
+    "A": 175,
+    "B": 150,
+    "tie": 50
+  },
+  "agreement_rate": 1.0,
+  "total_cost_usd": 2.840456999999999,
+  "avg_latency_ms": 19567.60721523501,
+  "total_input_tokens": 1175469,
+  "total_output_tokens": 150136
+}

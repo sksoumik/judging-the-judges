@@ -1,0 +1,16 @@
+{
+  "model": "gpt-4o",
+  "strategy": "B0_naive",
+  "benchmark": "custom",
+  "n_instances": 375,
+  "verdict_distribution": {
+    "A": 147,
+    "B": 144,
+    "tie": 84
+  },
+  "agreement_rate": 0.96,
+  "total_cost_usd": 1.4737400000000007,
+  "avg_latency_ms": 3576.389058557339,
+  "total_input_tokens": 427084,
+  "total_output_tokens": 40603
+}

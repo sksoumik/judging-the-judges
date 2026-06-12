@@ -1,0 +1,16 @@
+Model,Strategy,Expansion Bias,Trunc. Accuracy,Trunc. n
+Gemini 2.5 Pro,Baseline,+0.40,1.00,25
+Gemini 2.5 Pro,CoT,+0.40,1.00,25
+Gemini 2.5 Pro,Combined Budget,+0.32,0.88,25
+Claude Sonnet 4,Baseline,-0.12,1.00,25
+Claude Sonnet 4,CoT,+0.06,0.96,25
+Claude Sonnet 4,Combined Budget,+0.14,1.00,25
+GPT-4o,Baseline,-0.04,0.96,25
+GPT-4o,CoT,+0.26,0.92,25
+GPT-4o,Combined Budget,+0.28,0.96,25
+Llama 3.3-70B,Baseline,+0.44,0.88,25
+Llama 3.3-70B,CoT,+0.46,1.00,25
+Llama 3.3-70B,Combined Budget,+0.56,1.00,25
+Gemini 2.5 Flash,Baseline,+0.24,1.00,25
+Gemini 2.5 Flash,CoT,+0.32,0.96,25
+Gemini 2.5 Flash,Combined Budget,+0.36,0.96,25

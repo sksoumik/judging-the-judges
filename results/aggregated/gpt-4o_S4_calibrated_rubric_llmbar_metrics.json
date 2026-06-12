@@ -1,0 +1,16 @@
+{
+  "model": "gpt-4o",
+  "strategy": "S4_calibrated_rubric",
+  "benchmark": "llmbar",
+  "n_instances": 199,
+  "verdict_distribution": {
+    "A": 88,
+    "B": 99,
+    "tie": 12
+  },
+  "agreement_rate": 0.7185929648241206,
+  "total_cost_usd": 0.6316549999999999,
+  "avg_latency_ms": 4502.458352602588,
+  "total_input_tokens": 133586,
+  "total_output_tokens": 29769
+}

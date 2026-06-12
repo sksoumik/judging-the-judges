@@ -1,0 +1,16 @@
+{
+  "model": "llama-3.3-70b",
+  "strategy": "S8_combined_budget",
+  "benchmark": "llmbar",
+  "n_instances": 200,
+  "verdict_distribution": {
+    "A": 81,
+    "B": 81,
+    "tie": 38
+  },
+  "agreement_rate": 0.535,
+  "total_cost_usd": 0.0,
+  "avg_latency_ms": 5595.468648565584,
+  "total_input_tokens": 304026,
+  "total_output_tokens": 70895
+}

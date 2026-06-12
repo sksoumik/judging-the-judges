@@ -1,0 +1,16 @@
+{
+  "model": "gpt-4o",
+  "strategy": "S5_cot_forcing",
+  "benchmark": "mt_bench",
+  "n_instances": 399,
+  "verdict_distribution": {
+    "A": 181,
+    "B": 176,
+    "tie": 42
+  },
+  "agreement_rate": 0.6541353383458647,
+  "total_cost_usd": 3.2271149999999986,
+  "avg_latency_ms": 20145.963691523648,
+  "total_input_tokens": 274066,
+  "total_output_tokens": 254195
+}
