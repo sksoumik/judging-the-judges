@@ -1,6 +1,6 @@
 # Judging the Judges
 
-Code and data for the TMLR paper "Judging the Judges: A Systematic Evaluation of Bias Mitigation Strategies in LLM-as-a-Judge Pipelines" (https://openreview.net/forum?id=QF4IAmG4zc).
+Code and data for the TMLR paper [*Judging the Judges: A Systematic Evaluation of Bias Mitigation Strategies in LLM-as-a-Judge Pipelines*](https://openreview.net/forum?id=QF4IAmG4zc).
 
 We measure four biases in LLM judges (position, verbosity, style, and self-preference) and compare nine debiasing strategies across five judge models (Gemini 2.5 Pro, Gemini 2.5 Flash, Claude Sonnet 4, GPT-4o, Llama 3.3-70B) and three benchmarks (MT-Bench, LLMBar, and a 375-pair controlled dataset we built).
 
