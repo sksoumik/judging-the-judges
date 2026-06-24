@@ -48,12 +48,14 @@ results/         cached outputs and aggregated metrics
 ## Citation
 
 ```bibtex
-@article{soumik2026judging,
-  title={Judging the Judges: A Systematic Evaluation of Bias Mitigation Strategies in LLM-as-a-Judge Pipelines},
-  author={Soumik, Sadman Kabir},
-  journal={Transactions on Machine Learning Research},
-  issn={2835-8856},
-  year={2026},
-  url={https://openreview.net/forum?id=QF4lAmG4zc}
+@article{
+soumik2026judging,
+title={Judging the Judges: A Systematic Evaluation of Bias Mitigation Strategies in {LLM}-as-a-Judge Pipelines},
+author={Sadman Kabir Soumik},
+journal={Transactions on Machine Learning Research},
+issn={2835-8856},
+year={2026},
+url={https://openreview.net/forum?id=QF4lAmG4zc},
+note={}
 }
 ```
