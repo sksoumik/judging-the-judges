@@ -54,6 +54,6 @@ results/         cached outputs and aggregated metrics
   journal={Transactions on Machine Learning Research},
   issn={2835-8856},
   year={2026},
-  url={https://openreview.net/forum?id=QF4IAmG4zc}
+  url={https://openreview.net/forum?id=QF4lAmG4zc}
 }
 ```
