@@ -52,6 +52,8 @@ results/         cached outputs and aggregated metrics
   title={Judging the Judges: A Systematic Evaluation of Bias Mitigation Strategies in LLM-as-a-Judge Pipelines},
   author={Soumik, Sadman Kabir},
   journal={Transactions on Machine Learning Research},
-  year={2026}
+  issn={2835-8856},
+  year={2026},
+  url={https://openreview.net/forum?id=QF4IAmG4zc}
 }
 ```
